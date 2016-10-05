@@ -34,6 +34,23 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>OTA_VARIABLES</key>
+	<dict>
+		<key>OTA_HOST</key>
+		<string>https://ota-demo.s3.amazonaws.com</string>
+		<key>OTA_NAME</key>
+		<string>$(EXECUTABLE_NAME)</string>
+		<key>OTA_FULL_NAME</key>
+		<string>$(PRODUCT_NAME)</string>
+		<key>OTA_APP_IDENTIFIER</key>
+		<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+		<key>OTA_BACKGROUND_COLOR</key>
+		<string>#ddd</string>
+		<key>OTA_FOREGROUND_COLOR</key>
+		<string>#fff</string>
+		<key>OTA_BUCKET_NAME</key>
+		<string>ota-demo</string>
+	</dict>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

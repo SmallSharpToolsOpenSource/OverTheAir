@@ -12,9 +12,6 @@
 		265D310D1DA4A443003A4268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265D310B1DA4A443003A4268 /* Main.storyboard */; };
 		265D310F1DA4A443003A4268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265D310E1DA4A443003A4268 /* Assets.xcassets */; };
 		265D31121DA4A443003A4268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265D31101DA4A443003A4268 /* LaunchScreen.storyboard */; };
-		265D311D1DA4D6F8003A4268 /* prepare_ota.sh in Resources */ = {isa = PBXBuildFile; fileRef = 265D311A1DA4D6F8003A4268 /* prepare_ota.sh */; };
-		265D311E1DA4D6F8003A4268 /* prepare_ota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D311B1DA4D6F8003A4268 /* prepare_ota.swift */; };
-		265D311F1DA4D6F8003A4268 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 265D311C1DA4D6F8003A4268 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +22,6 @@
 		265D310E1DA4A443003A4268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		265D31111DA4A443003A4268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		265D31131DA4A443003A4268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		265D311A1DA4D6F8003A4268 /* prepare_ota.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = prepare_ota.sh; sourceTree = "<group>"; };
-		265D311B1DA4D6F8003A4268 /* prepare_ota.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = prepare_ota.swift; sourceTree = "<group>"; };
-		265D311C1DA4D6F8003A4268 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +38,6 @@
 		265D30FB1DA4A443003A4268 = {
 			isa = PBXGroup;
 			children = (
-				265D311C1DA4D6F8003A4268 /* README.md */,
-				265D311A1DA4D6F8003A4268 /* prepare_ota.sh */,
-				265D311B1DA4D6F8003A4268 /* prepare_ota.swift */,
 				265D31061DA4A443003A4268 /* OverTheAir */,
 				265D31051DA4A443003A4268 /* Products */,
 			);
@@ -135,7 +126,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				265D31121DA4A443003A4268 /* LaunchScreen.storyboard in Resources */,
-				265D311D1DA4D6F8003A4268 /* prepare_ota.sh in Resources */,
 				265D310F1DA4A443003A4268 /* Assets.xcassets in Resources */,
 				265D310D1DA4A443003A4268 /* Main.storyboard in Resources */,
 			);
@@ -156,7 +146,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"### Preparing OTA ###\"\n\nSCRIPT=${PROJECT_DIR}/prepare_ota.swift\n\nif [ -f \"${SCRIPT}\" ]; then\n/usr/bin/swift ${SCRIPT}\nelse\necho \"error: Script Not Found: ${SCRIPT}\"\nfi";
+			shellScript = "echo \"### Preparing OTA ###\"\n\nSCRIPT=${PROJECT_DIR}/prepare_ota.swift\n\nif [ -f \"${SCRIPT}\" ]; then\nxcrun --sdk macosx swift ${SCRIPT}\nelse\necho \"error: Script Not Found: ${SCRIPT}\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -166,8 +156,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				265D310A1DA4A443003A4268 /* ViewController.swift in Sources */,
-				265D311E1DA4D6F8003A4268 /* prepare_ota.swift in Sources */,
-				265D311F1DA4D6F8003A4268 /* README.md in Sources */,
 				265D31081DA4A443003A4268 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

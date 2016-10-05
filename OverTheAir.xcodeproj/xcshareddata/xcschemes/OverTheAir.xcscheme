@@ -61,38 +61,6 @@
             ReferencedContainer = "container:OverTheAir.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "OTA_HOST"
-            value = "https://ota-demo.s3.amazonaws.com"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "OTA_NAME"
-            value = "$(TARGET_NAME)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "OTA_FULL_NAME"
-            value = "$(PRODUCT_NAME)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "OTA_APP_IDENTIFIER"
-            value = "$(PRODUCT_BUNDLE_IDENTIFIER)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "OTA_BACKGROUND_COLOR"
-            value = "#ddd"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "OTA_FOREGROUND_COLOR"
-            value = "#fff"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
